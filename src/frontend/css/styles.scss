@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100%;
+    width: 100%;
+    background: #fefefe;
+  }
+  
+  button {
+    outline: none;
+    border: none;
+    background-color: #1c6fff;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #3d424b;
+      transform: translateY(-1px);
+    
+      /* Will cause button not to glitch if hovered on bottom of button */
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+    }
+  } 
