@@ -14,10 +14,10 @@
 body {
   height: 100%;
   width: 100%;
-  background: #fefefe;
   margin: 0;
   font-family: Raleway, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   overflow: hidden;
+  background-color: rgb(207, 207, 207);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +45,7 @@ main {
     z-index: -1;
     bottom:0;
     right:0;
+    animation: slide-in 2s;
   }
 
   div.title-container {
@@ -68,7 +69,6 @@ main {
       font-size: calc(20px + 1vw);
       color: white;
       animation: kern-in 1s;
-      text-shadow: 0 0 5px black;
       font-family: Raleway, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
   }
@@ -98,6 +98,7 @@ nav {
   padding: 10px;
   overflow: hidden;
   width: 100%;
+  height: 120px;
 
   div.logo-wrap {
     .logo-link img {
@@ -216,5 +217,11 @@ nav {
   from {
     letter-spacing: 6px;
     opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-30px);
   }
 }
