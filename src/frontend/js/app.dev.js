@@ -1,3 +1,5 @@
+// JavaScript by Aditya (twitter.com/TheCodingGuru) and PineappleRind (https://github.com/PineappleRind)
+
 "use strict";
 
 var menuOpen = document.getElementById("menuOpen");
