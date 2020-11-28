@@ -1,3 +1,5 @@
+/* CSS by PineappleRind (https://pineapplerind.github.io) and Aditya (https://twitter.com/TheCodingGuru) 2020 */
+
 @mixin overlay {
   top:0;
   bottom:0;
@@ -45,7 +47,6 @@ main {
     z-index: -1;
     bottom:0;
     right:0;
-    animation: slide-in 2s;
   }
 
   div.title-container {
@@ -61,14 +62,12 @@ main {
     h1 {
       font-size: calc(40px + 5vw);
       color: white;
-      animation: float-in 1s;
       text-shadow: 0 0 5px black;
     }
 
     h2 {
       font-size: calc(20px + 1vw);
       color: white;
-      animation: kern-in 1s;
       font-family: Raleway, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
   }
@@ -154,9 +153,61 @@ nav {
       }
     }
 
-    img {
-      height: 40px;
-      width: 40px;
+    .nav-toggle {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      height: 2rem;
+      position: fixed;
+      width: 3.6rem;
+      z-index: 2;
+    }
+    
+    .nav-toggle:hover { opacity: 0.8; }
+    
+    .nav-toggle .nav-toggle-bar,  .nav-toggle .nav-toggle-bar::after,  .nav-toggle .nav-toggle-bar::before {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      background: white;
+      content: '';
+      height: 0.4rem;
+      width: 100%;
+      margin:0;
+    }
+    
+    .nav-toggle .nav-toggle-bar { margin-top: 0; }
+    
+    .nav-toggle .nav-toggle-bar::after { margin-top: 0.9rem; }
+    
+    .nav-toggle .nav-toggle-bar::before { margin-top: -0.9rem; }
+    
+    .nav-toggle.expanded .nav-toggle-bar { background: transparent; }
+    
+    .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+      background: white;
+      margin-top: 0;
+      margin:0;
+    }
+    
+    .nav-toggle.expanded .nav-toggle-bar::after {
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    
+    .nav-toggle.expanded .nav-toggle-bar::before {
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
     }
   }
 

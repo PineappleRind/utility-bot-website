@@ -1,19 +1,22 @@
-// JavaScript by Aditya (twitter.com/TheCodingGuru) and PineappleRind (https://github.com/PineappleRind)
+// JavaScript by Aditya (twitter.com/TheCodingGuru) and PineappleRind (https://pineapplerind.github.io), 2020
 
 "use strict";
-
-var menuOpen = document.getElementById("menuOpen");
-var navGrad = document.getElementById("navShade");
+var t = document.getElementById("menuOpen"),
+    r = document.getElementById("navShade"),
+    s = {
+        n: document.querySelector(".nav-toggle"),
+        l: function(e) {
+            e.preventDefault(), this.n.classList.toggle("expanded")
+        }
+    };
 
 function openNav() {
-  var e = document.getElementById("menuImg");
-  "300px" === menuOpen.style.marginRight ? (menuOpen.style.marginRight = "0px", e.style.animationName = "scale-out", e.style.height = "40px", e.style.width = "40px", navGrad.style.left = "100%", setTimeout(function () {
-    e.src = "imgs/hamburgermenu.png", e.style.animationName = "scale-in";
-  }, 300)) : (menuOpen.style.marginRight = "300px", e.style.animationName = "scale-out", setTimeout(function () {
-    e.src = "imgs/close.png", e.style.animationName = "scale-in", navGrad.style.left = "calc(100% - 400px)", e.style.height = "55px", e.style.width = "55px";
-  }, 300));
+    "300px" === t.style.marginRight ? (t.style.marginRight = "0px", r.style.left = "100%") : (t.style.marginRight = "300px", setTimeout(function() {
+        r.style.left = "calc(100% - 400px)"
+    }, 300))
 }
-
-menuOpen.addEventListener("click", function () {
-  openNav();
+t.addEventListener("click", function(e) {
+    openNav(), s.l(e)
 });
+
+console.log("JavaScript by Aditya (twitter.com/TheCodingGuru) and PineappleRind (https://pineapplerind.github.io), 2020")
