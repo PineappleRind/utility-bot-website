@@ -8,7 +8,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: Raleway, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: Oxygen, Arial, sans-serif;
   overflow: hidden;
   background-color: #0058d4;
 }
@@ -113,7 +113,7 @@ nav div.github {
   width: 80px;
   border-radius: 50%;
   padding: 20px;
-  background-color: coral;
+  background-color: white;
   float: right;
   vertical-align: center;
   display: flex;
@@ -126,8 +126,14 @@ nav div.github {
   overflow: hidden;
   position: absolute;
   top: 10px;
-  right: 70px;
+  right: 100px;
   z-index: 6;
+}
+nav div.github:hover {
+  transform: scale(1.05);
+}
+nav div.github a img {
+  height: 80px;
 }
 nav div.menu {
   height: 80px;
@@ -135,6 +141,7 @@ nav div.menu {
   border-radius: 50%;
   padding: 20px;
   background-color: coral;
+  right: 10px;
   float: right;
   vertical-align: center;
   display: flex;
@@ -147,7 +154,6 @@ nav div.menu {
   overflow: hidden;
   position: absolute;
   top: 10px;
-  right: 10px;
   z-index: 6;
 }
 nav div.menu:before {
@@ -168,7 +174,7 @@ nav div.menu:hover {
 }
 nav div.menu:hover:before {
   transform: rotateY(0deg);
-  right: 0;
+  right: -10px;
 }
 nav div.menu .nav-toggle {
   -webkit-user-select: none;
@@ -229,34 +235,41 @@ nav div.menu .nav-toggle.expanded .nav-toggle-bar::before {
 }
 nav div.main-nav {
   height: 100%;
-  width: 400px;
+  width: 500px;
   position: absolute;
   left: 100%;
   right: 0;
   bottom: 0;
   top: 0;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+  background: white;
   transition: 0.5s;
   z-index: 5;
   color: white;
+  resize: horizontal;
+  overflow: auto;
 }
 nav div.main-nav ul {
   list-style-type: none;
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 400px;
   align-items: left;
   flex-direction: column;
   font-size: 40px;
   text-transform: lowercase;
   padding: 20px;
   margin-top: 100px;
+  animation-duration: 1s;
+  resize: horizontal;
+  position: relative;
+  overflow: auto;
 }
 nav div.main-nav ul li {
   padding: 10px;
   cursor: pointer;
   position: relative;
   width: fit-content;
+  color: black;
 }
 nav div.main-nav ul li::after {
   background: #000000;
@@ -275,14 +288,26 @@ nav div.main-nav ul li:hover::after {
   width: 100%;
 }
 nav div.main-nav ul li.special {
-  background-color: transparent;
   width: fit-content;
   border-radius: 10px;
-  border: 2px solid coral;
+  border: 2px solid #506dff;
+  background-color: rgba(80, 109, 255, 0.422);
   transition: 0.5s;
+  padding: 0;
+  font-size: 40px;
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
 }
 nav div.main-nav ul li.special:hover {
-  background-color: coral;
+  background-color: rgba(80, 109, 255, 0.815);
+  border: 2px solid #506dff;
+}
+nav div.main-nav ul li.special:hover::after {
+  width: 0;
 }
 
 @keyframes scale-out {
@@ -310,7 +335,12 @@ nav div.main-nav ul li.special:hover {
   }
 }
 @keyframes slide-in {
-  from {
-    transform: translateY(-30px);
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 0;
   }
 }
