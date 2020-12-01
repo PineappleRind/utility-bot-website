@@ -32,6 +32,36 @@ function openNav() {
     },5);
    }
 }
+
+function contactModal() {
+    c.insertAdjacentHTML('afterend', '<div class="modal-blur" id="overlay"><div class="modal" id="contactModal"><p>&times;</p><h2>Contact Us</h2></div></div>');
+    let modal = document.getElementById('contactModal');
+    let f = document.getElementById("overlay");
+    if (modal.style.display = 'none') {
+        modal.style.display = 'block';
+        showOverlay(f);
+        modal.style.animationName = 'scale-in';
+    } else {
+        hideOverlay(f, 500);
+    }
+}
+
+function showOverlay(overlay) {
+    overlay.style.display = 'block';
+    overlay.style.opacity = '1';
+}
+
+function hideOverlay(overlay, fadeTime) {
+    overlay.style.opacity = '1';
+    setTimeout(function(){
+        overlay.style.display = 'none';
+    },fadeTime);
+}
+let b = document.getElementById("contact");
+
+b.addEventListener("click", function(){
+    contactModal();
+})
 t.addEventListener("click", function(e) {
     openNav();
     s.l(e);

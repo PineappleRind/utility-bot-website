@@ -17,8 +17,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: Oxygen, Arial, sans-serif;
-  overflow: hidden;
+  font-family: 'Inter', Arial, sans-serif;
   background-color: rgb(0, 88, 212);
 
   #blurOverlay {
@@ -35,7 +34,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin:0;
-  font-family: Epilogue, Verdana, Helvetica, sans-serif;
+  font-family: Epilogue, Helvetica, sans-serif;
 }
 main {
   display: inline-block;
@@ -44,7 +43,6 @@ main {
   height: 100%;
   padding-bottom: 100%;
   vertical-align: middle;
-  overflow: hidden;
   top: 0;
   left: 0;
   right:0;
@@ -80,7 +78,7 @@ main {
     h2 {
       font-size: calc(20px + 1vw);
       color: white;
-      font-family: Raleway, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-family: Inter, Arial, sans-serif;
     }
   }
 }
@@ -107,7 +105,6 @@ nav {
   list-style-type: none;
   margin: 0;
   padding: 10px;
-  overflow: hidden;
   width: 100%;
   height: 120px;
 
@@ -166,34 +163,10 @@ nav {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     justify-content: center;
     transition: 0.3s;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
     overflow: hidden;
     position: absolute;
     top: 10px;
     z-index: 6;
-
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: -10px;
-      right: 100%;
-      bottom: 0;
-      background: rgb(227, 74, 51);
-      border-radius: 100%;
-      transform: rotateY(90deg);
-      transition: 0.3s;
-    }
-
-    &:hover {
-      transform: scale(1.05);
-      &:before {
-        transform: rotateY(0deg);
-        right: -10px;
-      }
-    }
     
 
     .nav-toggle {
@@ -206,8 +179,6 @@ nav {
       width: 3.6rem;
       z-index: 2;
     }
-    
-    .nav-toggle:hover { opacity: 0.8; }
     
     .nav-toggle .nav-toggle-bar,  .nav-toggle .nav-toggle-bar::after,  .nav-toggle .nav-toggle-bar::before {
       position: absolute;
@@ -266,24 +237,19 @@ nav {
     transition: 0.5s;
     z-index: 5;
     color: white;
-    resize:horizontal;
-    overflow: auto;
 
     ul {
       list-style-type: none;
       display: flex;
       height: 100%;
-      width: 400px;
+      width: 500px;
       align-items: left;
       flex-direction: column;
       font-size: 40px;
       text-transform: lowercase;
-      padding: 20px;
       margin-top: 100px;
       animation-duration: 1s;
-      resize: horizontal;
       position: relative;
-      overflow: auto;
 
       li {
         padding: 10px;
@@ -310,15 +276,14 @@ nav {
         }
 
         &.special {
-          width: fit-content;
           border-radius: 10px;
           border: 2px solid rgb(80, 109, 255);
           background-color: rgba(80, 109, 255, 0.422);
           transition: 0.5s;
           padding:0;
+          width: 100%;
 
           font-size: 40px;
-          width: 100%;
           color: white;
           text-transform: uppercase;
           text-align: center;
@@ -334,6 +299,32 @@ nav {
           }
         }
       }
+    }
+  }
+}
+
+.modal-blur {
+  @include overlay;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 7;
+  display:none;
+  .modal {
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 30%;
+    right:30%;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index:7;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.339);
+  
+    h2 {
+      text-align: center;
+      font-size: 50px;
+      color: black;
+      padding: 20px;
+      background-color: #efefef;
     }
   }
 }
