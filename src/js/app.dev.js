@@ -33,30 +33,29 @@ function openNav() {
    }
 }
 
+let modal = document.getElementById('contactModal');
+let overlay = document.getElementById("overlay");
 function contactModal() {
-    c.insertAdjacentHTML('afterend', '<div class="modal-blur" id="overlay"><div class="modal" id="contactModal"><p>&times;</p><h2>Contact Us</h2></div></div>');
-    let modal = document.getElementById('contactModal');
-    let f = document.getElementById("overlay");
-    if (modal.style.display = 'none') {
         modal.style.display = 'block';
-        showOverlay(f);
         modal.style.animationName = 'scale-in';
-    } else {
-        hideOverlay(f, 500);
-    }
+        overlay.style.display = 'block';
+        overlay.style.opacity = '1';
 }
 
-function showOverlay(overlay) {
-    overlay.style.display = 'block';
-    overlay.style.opacity = '1';
+function closeContactModal() {
+    overlay.style.opacity = '0';
+        setTimeout(function(){
+            overlay.style.display = 'none';
+            modal.style.animationName = '';
+            modal.style.display = 'none';
+        },500);
+        modal.style.animationName = 'scale-out';
 }
+let a = document.getElementById("contactClose");
+a.addEventListener("click",function(){
+    closeContactModal();
+})
 
-function hideOverlay(overlay, fadeTime) {
-    overlay.style.opacity = '1';
-    setTimeout(function(){
-        overlay.style.display = 'none';
-    },fadeTime);
-}
 let b = document.getElementById("contact");
 
 b.addEventListener("click", function(){

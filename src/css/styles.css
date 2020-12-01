@@ -285,6 +285,7 @@ nav div.main-nav ul li.special:hover::after {
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 7;
   display: none;
+  transition: 0.5s;
 }
 .modal-blur .modal {
   position: fixed;
@@ -303,6 +304,13 @@ nav div.main-nav ul li.special:hover::after {
   color: black;
   padding: 20px;
   background-color: #efefef;
+}
+.modal-blur .modal p {
+  font-size: 40px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  cursor: pointer;
 }
 
 @keyframes scale-out {

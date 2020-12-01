@@ -308,6 +308,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 7;
   display:none;
+  transition: 0.5s;
   .modal {
     position: fixed;
     top: 10%;
@@ -325,6 +326,14 @@ nav {
       color: black;
       padding: 20px;
       background-color: #efefef;
+    }
+
+    p {
+      font-size: 40px;
+      position: absolute;
+      top:0px;
+      right: 10px;
+      cursor: pointer;
     }
   }
 }
