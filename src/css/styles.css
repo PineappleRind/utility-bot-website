@@ -20,10 +20,19 @@ body #blurOverlay {
   position: absolute;
   z-index: 3;
   opacity: 0;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.339);
+  background-color: rgba(0, 0, 0, 0.6);
   transition: 0.5s linear;
+}
+body noscript {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  background: white;
+  z-index: 100;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -106,8 +115,8 @@ nav div.logo-wrap .logo-link img {
   margin-top: 10px;
 }
 nav div.github {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   padding: 20px;
   background-color: white;
@@ -124,17 +133,35 @@ nav div.github {
   position: absolute;
   top: 10px;
   right: 100px;
-  z-index: 6;
+  z-index: 7;
 }
 nav div.github:hover {
   transform: scale(1.05);
 }
 nav div.github a img {
-  height: 80px;
+  height: 70px;
+}
+nav p#githubLabel {
+  overflow: hidden;
+  position: absolute;
+  top: -5px;
+  right: 185px;
+  z-index: 6;
+  font-size: 19px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.339);
+  padding: 21px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  overflow: hidden;
+  opacity: 0;
+  padding-left: 40px;
+  transition: 0.4s;
+  display: none;
 }
 nav div.menu {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   padding: 20px;
   background-color: coral;
@@ -150,6 +177,7 @@ nav div.menu {
   position: absolute;
   top: 10px;
   z-index: 6;
+  margin: 0;
 }
 nav div.menu .nav-toggle {
   -webkit-user-select: none;
@@ -160,6 +188,7 @@ nav div.menu .nav-toggle {
   position: fixed;
   width: 3.6rem;
   z-index: 2;
+  padding: 0;
 }
 nav div.menu .nav-toggle .nav-toggle-bar, nav div.menu .nav-toggle .nav-toggle-bar::after, nav div.menu .nav-toggle .nav-toggle-bar::before {
   position: absolute;
@@ -177,15 +206,16 @@ nav div.menu .nav-toggle .nav-toggle-bar, nav div.menu .nav-toggle .nav-toggle-b
   height: 0.4rem;
   width: 100%;
   margin: 0;
+  padding: 0;
 }
 nav div.menu .nav-toggle .nav-toggle-bar {
   margin-top: 0;
 }
 nav div.menu .nav-toggle .nav-toggle-bar::after {
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
 }
 nav div.menu .nav-toggle .nav-toggle-bar::before {
-  margin-top: -0.9rem;
+  margin-top: -0.8rem;
 }
 nav div.menu .nav-toggle.expanded .nav-toggle-bar {
   background: transparent;
@@ -227,7 +257,7 @@ nav div.main-nav ul {
   flex-direction: column;
   font-size: 40px;
   text-transform: lowercase;
-  margin-top: 100px;
+  margin-top: 120px;
   animation-duration: 1s;
   position: relative;
 }
@@ -237,6 +267,7 @@ nav div.main-nav ul li {
   position: relative;
   width: fit-content;
   color: black;
+  font-size: 35px;
 }
 nav div.main-nav ul li::after {
   background: #000000;
@@ -255,25 +286,39 @@ nav div.main-nav ul li:hover::after {
   width: 100%;
 }
 nav div.main-nav ul li.special {
-  border-radius: 10px;
-  border: 2px solid #506dff;
-  background-color: rgba(80, 109, 255, 0.422);
-  transition: 0.5s;
-  padding: 0;
-  width: 100%;
-  font-size: 40px;
-  color: white;
+  background-color: #175dff;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 35px;
+  color: white;
+  padding: 20px;
+  overflow: hidden;
   text-align: center;
-  margin-top: 30px;
-  position: relative;
+  margin: 40px;
+  margin-left: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
 }
-nav div.main-nav ul li.special:hover {
-  background-color: rgba(80, 109, 255, 0.815);
-  border: 2px solid #506dff;
+nav div.main-nav ul li.special::after {
+  display: none;
 }
-nav div.main-nav ul li.special:hover::after {
-  width: 0;
+nav div.main-nav ul li.special .ripple {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) scale(0, 0);
+  border-radius: 50%;
+  background-color: white;
+  opacity: 1;
+  pointer-events: none;
+}
+nav div.main-nav ul li.special .ripple-animate {
+  transition: 0.6s transform, opacity 0.6s;
 }
 
 .modal-blur {
@@ -289,8 +334,8 @@ nav div.main-nav ul li.special:hover::after {
 }
 .modal-blur .modal {
   position: fixed;
-  top: 10%;
-  bottom: 10%;
+  top: 30%;
+  bottom: 30%;
   left: 30%;
   right: 30%;
   background-color: #fff;
@@ -308,7 +353,7 @@ nav div.main-nav ul li.special:hover::after {
 .modal-blur .modal p {
   font-size: 40px;
   position: absolute;
-  top: 0px;
+  top: -30px;
   right: 10px;
   cursor: pointer;
 }
