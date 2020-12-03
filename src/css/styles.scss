@@ -151,7 +151,8 @@ nav {
     }
 
     a img {
-      height: 70px
+      height: 72px;
+      width: 70px;
     }
   }
 
@@ -322,7 +323,12 @@ nav {
           &::after {
             display: none;
           }
-  
+        }
+      }
+    }
+  }
+}
+
           .ripple {
             width: 48px;
             height: 48px;
@@ -338,11 +344,6 @@ nav {
           .ripple-animate {
             transition: 0.6s transform, opacity 0.6s;
           }
-        }
-      }
-    }
-  }
-}
 
 .modal-blur {
   @include overlay;
@@ -382,6 +383,13 @@ nav {
 @keyframes scale-out {
   to {
     transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
     opacity: 0;
   }
 }

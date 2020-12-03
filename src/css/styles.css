@@ -139,7 +139,8 @@ nav div.github:hover {
   transform: scale(1.05);
 }
 nav div.github a img {
-  height: 70px;
+  height: 72px;
+  width: 70px;
 }
 nav p#githubLabel {
   overflow: hidden;
@@ -305,7 +306,8 @@ nav div.main-nav ul li.special {
 nav div.main-nav ul li.special::after {
   display: none;
 }
-nav div.main-nav ul li.special .ripple {
+
+.ripple {
   width: 48px;
   height: 48px;
   position: absolute;
@@ -317,7 +319,8 @@ nav div.main-nav ul li.special .ripple {
   opacity: 1;
   pointer-events: none;
 }
-nav div.main-nav ul li.special .ripple-animate {
+
+.ripple-animate {
   transition: 0.6s transform, opacity 0.6s;
 }
 
@@ -361,6 +364,12 @@ nav div.main-nav ul li.special .ripple-animate {
 @keyframes scale-out {
   to {
     transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes ripple {
+  to {
+    transform: scale(4);
     opacity: 0;
   }
 }
