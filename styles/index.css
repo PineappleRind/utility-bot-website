@@ -2,6 +2,8 @@
 
 * {
     border-bottom: 1ch;
+    box-sizing: border-box;
+    animation-duration: .5s;
     font-family: 'Inter', sans-serif;
-    
+    padding: 5px;
 }
