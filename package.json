@@ -1,0 +1,19 @@
+{
+  "name": "utility-bot-website",
+  "version": "1.0.0",
+  "description": "Utility Bot's website built with react and nestjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discordutilitybot/utility-bot-website.git"
+  },
+  "author": "Andrew Nijmeh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/discordutilitybot/utility-bot-website/issues"
+  },
+  "homepage": "https://github.com/discordutilitybot/utility-bot-website#readme"
+}
