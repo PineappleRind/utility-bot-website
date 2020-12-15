@@ -21,6 +21,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm run build`
 
+<<<<<<< HEAD
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -44,3 +45,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+=======
+* **PineappleRind** - *Main Developer* - [PineappleRind](https://github.com/PineappleRind)
+* **andrewnijmeh** - *Main Developer for Utility Bot's Backend Systems* - [andrewnijmeh](https://github.com/andrewnijmeh)
+* **TheCodingGuru** - *Developer* - [TheCodingGuru](https://github.com/TheCodingGuru)
+>>>>>>> 05f93c5c532cfe694a64c2a6063b01d18859606d
