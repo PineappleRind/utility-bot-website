@@ -23,4 +23,4 @@ You can edit the main page my editing _app.tsx. It should have hot reload so the
 
 * **PineappleRind** - *Main Developer* - [PineappleRind](https://github.com/PineappleRind)
 * **andrewnijmeh** - *Main Developer for Utility Bot's Backend Systems* - [andrewnijmeh](https://github.com/andrewnijmeh)
-* **TheCodingGuru** - *Developer* - [PineappleRind](https://github.com/TheCodingGuru)
+* **TheCodingGuru** - *Developer* - [TheCodingGuru](https://github.com/TheCodingGuru)
