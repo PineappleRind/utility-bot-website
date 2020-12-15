@@ -1,19 +1,29 @@
 {
-  "name": "utility-bot-website",
-  "version": "1.0.0",
-  "description": "Utility Bot's website built with react and nestjs",
-  "main": "index.js",
+  "name": "utilitybot",
+  "version": "1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "dev": "next dev -p 3002",
+      "build": "next build",
+      "start": "next start -p 3001",
+      "export": "next export"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/discordutilitybot/utility-bot-website.git"
+  "dependencies": {
+      "@appbaseio/reactivesearch": "^3.12.7",
+      "bootstrap": "^4.5.3",
+      "cookie-parser": "^1.4.5",
+      "cross-env": "^7.0.2",
+      "express": "^4.17.1",
+      "next": "^10.0.0",
+      "next-cookies": "^2.0.3",
+      "react": "17.0.1",
+      "react-bootstrap": "^1.4.0",
+      "react-dom": "17.0.1"
   },
-  "author": "Andrew Nijmeh",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/discordutilitybot/utility-bot-website/issues"
-  },
-  "homepage": "https://github.com/discordutilitybot/utility-bot-website#readme"
+  "devDependencies": {
+      "@types/node": "^14.14.5",
+      "@types/react": "^16.9.53",
+      "prop-types": "^15.7.2",
+      "typescript": "^4.0.5"
+  }
 }

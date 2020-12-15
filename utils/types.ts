@@ -8,7 +8,6 @@ export interface Server {
 
 }
 
-
 export interface Shard{
     id: number;
     guilds: number;
