@@ -1,4 +1,6 @@
+# Utility Bot's Website
 
+Built with Typescript Nestjs and React.
 
 ## Credits
 * **PineappleRind** - *Main Developer* - [PineappleRind](https://github.com/PineappleRind)
