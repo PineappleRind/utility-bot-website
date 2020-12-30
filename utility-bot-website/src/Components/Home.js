@@ -1,3 +1,4 @@
+import RippleButton from "RippleButton";
 const Home = () => {
   return (
     <div>
@@ -7,6 +8,7 @@ const Home = () => {
             Utility Bot is a discord bot with many useful commands to help you
             manage your server.
           </h1>
+          <RippleButton content="invite"/>
         </div>
       </div>
       <div className="faq-container">
