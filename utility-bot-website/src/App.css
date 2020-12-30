@@ -1,24 +1,27 @@
 :root {
-  --red: #e4323e;
-  --mid-color: #5b6419;
-  --green: #42aa0f;
+  --gray: rgb(34, 32, 32);
+  --black: rgb(24, 24, 24);
 }
 
 .home-main-container {
-  background-color: var(--red);
-  padding: 10rem 5rem;
-  /* padding: 3rem 100%; */
-  margin: -0.5rem;
+  background-color: var(--black);
+  padding: 7rem 1rem 2rem 4rem;
+  margin: 0 -0.5rem;
   display: flex;
-  align-items: center;
-  width: 90%;
-  background-image: linear-gradient(var(--red) 75%, var(--green));
+  background-image: linear-gradient(var(--black) 75%, var(--gray));
 }
 .invite-button {
+  font-family: inherit;
   font-size: 3rem;
-  background-color: crimson;
-  height: 25%;
-  width: 25%;
+  background-color: var(--black);
+  color: aliceblue;
+  height: 15%;
+  width: 15%;
+  cursor: pointer;
+}
+.invite-button:hover {
+  background: #7289d9;
+  color: black;
 }
 .logo {
   width: 35%;
@@ -26,26 +29,30 @@
   left: 0;
 }
 .home-content {
-  padding: 0.5rem 1.2rem;
+  padding: 2rem 1.2rem;
   animation: homeInfo-anim 2s;
   align-self: center;
 }
 
-.home-faq {
-  background: var(--green);
-  padding: 9rem 6rem;
-  margin: -0.5rem -0.5rem -0.5rem;
+.faq-container {
+  margin: 0 -0.5rem;
+
+  background: var(--gray);
+  padding: 9rem 0rem 9rem 2rem;
   display: flex;
+  flex-flow: column;
+}
+.faq {
+  margin-bottom: 2.5rem;
 }
 
 .nav {
   position: fixed;
-  min-height: 1rem;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 1.5rem;
-  background: var(--red);
+  padding: 0 1.2rem 0.5rem;
+  background: var(--black);
   color: black;
   display: flex;
 }
@@ -55,7 +62,7 @@
   font-size: 3vh;
   width: 70%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
 }
@@ -65,6 +72,22 @@
   display: flex;
   background-color: grey;
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .nav-items {
+    justify-items: flex-end;
+  }
+  .faq-container {
+    padding: 9rem 2rem;
+  }
+}
+
 @keyframes homeInfo-anim {
   from {
     opacity: 0;
@@ -77,4 +100,5 @@
 html {
   font-family: -paple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
 }

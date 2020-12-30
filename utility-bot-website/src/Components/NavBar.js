@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../logo.png";
+// import logo from ;
 
 const styles = {
   color: "white",
@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="nav">
       <ul className="nav-items">
         <li>
-          <img className="logo" src={logo} alt=""></img>
+          <img className="logo" src="assets/logo.png" alt=""></img>
         </li>
         <Link style={styles} to="/home">
           <li>Home</li>
@@ -24,7 +24,6 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-  function getStyles() {}
 };
 
 export default Navbar;
