@@ -8,10 +8,8 @@ const styles = {
 const Navbar = () => {
   return (
     <nav className="nav">
+      <img className="logo" src="assets/logo.png" alt=""></img>
       <ul className="nav-items">
-        <li>
-          <img className="logo" src="assets/logo.png" alt=""></img>
-        </li>
         <Link style={styles} to="/home">
           <li>Home</li>
         </Link>
