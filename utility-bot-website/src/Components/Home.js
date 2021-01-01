@@ -1,25 +1,11 @@
 const Home = () => {
   return (
     <div>
-      <div className="home-main-container">
-          <h1 className="home-content">
-            Utility Bot is a discord bot with many useful commands to help you
-            manage your server.
-          </h1>
-      </div>
-      <div className="faq-container">
-        <h1 style={{ marginLeft: "3rem"}}>FAQ</h1>
-        <br />
-        <ul style={{ marginLeft: "2rem" }}>
-          <li className="faq">
-            <h1>Q: What makes Utility Bot superior to other bots?</h1>
-            <h1>A: Absolutely everything</h1>
-          </li>
-          <li className="faq">
-            <h1>Q: Add your question here</h1>
-            <h1>A: Add your answer here</h1>
-          </li>
-        </ul>
+      <div className="section-container">
+        <h1 className="section-content">
+          Utility Bot is a discord bot with many useful commands to help you
+          manage your server.
+        </h1>
       </div>
     </div>
   );

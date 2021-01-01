@@ -4,7 +4,8 @@
   --black: rgb(24, 24, 24);
 }
 
-.home-main-container {
+.section-container {
+  width: 100%;
   background-color: var(--black);
   background-image: linear-gradient(var(--black) 75%, var(--gray));
   display: flex;
@@ -12,47 +13,75 @@
   padding-top: 8rem;
   padding-left: 2rem;
 }
-.home-content {
+.section-content {
+  margin-top: 9rem;
   margin-left: -2rem;
   padding: 2rem 7rem;
   animation: fade-in-anim 2.5s;
   align-self: center;
-}
-
-.faq-container {
-  width: 100vw;
-  margin-left: -1rem;
-  background: var(--gray);
-  flex-flow: column;
-  overflow: auto;
-  animation: pulse 2s;
-}
-.faq {
-  margin-left: 2rem;
-  margin-bottom: 2.5rem;
+  word-wrap: break-word;
 }
 
 .nav {
+  width: 100%;
+  height: 18%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 20%;
-  padding: 0 1.2rem 0.5rem;
   background: var(--black);
-  color: black;
   display: flex;
+  align-items: center;
 }
 
 .nav-items {
-  flex-flow: row;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 1.2rem;
   width: 70%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  height: 13vw;
   list-style: none;
+  margin-left: 2rem;
 }
+.burguer-toggle {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  top: 2rem;
+  right: 2.3rem;
+  z-index: 3;
+}
+.burguer {
+  background-color: white;
+  width: 1.8rem;
+  height: 0.2rem;
+  display: block;
+  right: 3rem;
+  position: fixed;
+}
+.line-1 {
+  top: 3rem;
+}
+.line-2 {
+  top: 3.5rem;
+}
+.line-3 {
+  top: 4rem;
+}
+
+.mobile-navbar {
+  list-style: none;
+  background-color: rgba(27, 27, 27, 0.99);
+  font-size: 1.4rem;
+  width: 100%;
+  position: fixed;
+  top: 7rem;
+  display: none;
+  z-index: 3;
+}
+
 .app {
   align-items: center;
   box-sizing: border-box;
@@ -60,6 +89,8 @@
   background-color: grey;
 }
 a {
+  margin: 1.5vw;
+  padding: 1.5vw;
   text-decoration: none;
 }
 a:hover {
@@ -82,33 +113,46 @@ a:hover {
   opacity: 0.9;
   box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.6);
 }
+
 .logo {
+  margin-left: 3rem;
+  height: 80%;
   width: 100px;
   flex-shrink: 0;
-
+  border-radius: 50px;
   overflow: hidden;
 }
-
+.section-container .faq {
+  padding: 0 1rem;
+}
 @media (max-width: 720px) {
   .nav-items {
-    position: absolute;
+    display: none;
+  }
+  .burguer-toggle {
+    display: block;
+  }
+  .mobile-navbar-links {
+    list-style: none;
+    display: flex;
+  }
+  .mobile-navbar {
+    display: flex;
   }
   .nav {
-    position: fixed;
-    height: 10%;
+    height: 115px;
   }
-  .faq-container {
+  .section-content .faq {
+    margin-left: -2rem;
     font-size: 0.8rem;
   }
   .logo {
-    margin-top: 1rem;
-    height: 95%;
-    width: 75px;
+    width: 92px;
   }
-}
-@media (max-width: 720px) {
-  .logo {
-    margin-right: 1rem;
+  .html {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
   }
 }
 
@@ -120,22 +164,11 @@ a:hover {
     opacity: 1;
   }
 }
-@keyframes pulse {
-  from {
-    transform: scale(0.75);
-    opacity: 0.5%;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 
 body,
 html {
   font-family: -paple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
-  background-color: var(--gray);
+  background-color: var(--black);
 }
