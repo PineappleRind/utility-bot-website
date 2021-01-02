@@ -5,7 +5,6 @@
 }
 
 .section-container {
-  width: 100%;
   background-color: var(--black);
   background-image: linear-gradient(var(--black) 75%, var(--gray));
   display: flex;
@@ -68,6 +67,19 @@
 .line-3 {
   top: 4rem;
 }
+.cards {
+  background-color: var(--gray);
+  display: flex;
+  justify-content: space-around;
+}
+.card-container {
+  text-align: center;
+  background-color: var(--black);
+
+  width: 22%;
+  border: 4px solid white;
+  border-radius: 1rem;
+}
 
 .mobile-navbar {
   list-style: none;
@@ -92,6 +104,7 @@ a {
   text-decoration: none;
 }
 a:hover {
+  animation: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   text-decoration: underline;
 }
 .invite-button {
@@ -124,6 +137,15 @@ a:hover {
   padding: 0 1rem;
 }
 @media (max-width: 720px) {
+  .cards{
+    align-items: center;
+    flex-flow: column;
+  }
+  .card-container{
+    
+    width: 80%;
+    margin-bottom: 3rem ;
+  }
   .nav-items {
     display: none;
   }
