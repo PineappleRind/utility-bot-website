@@ -1,17 +1,17 @@
-import RippleButton from "RippleButton";
+import RippleButton from "./RippleButton";
+
 const Home = () => {
   return (
     <div>
-      <div className="section">
+      <div className="section-container">
         <div>
-          <h1 className="home-content">
+          <h1 className="section-content">
             Utility Bot is a discord bot with many useful commands to help you
             manage your server.
           </h1>
-          <RippleButton content="invite"/>
+          <RippleButton content="invite" />
         </div>
       </div>
-      
     </div>
   );
 };

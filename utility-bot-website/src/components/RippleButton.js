@@ -1,7 +1,8 @@
-const RippleButton = () => {
+const RippleButton = (props) => {
     return (
         <div>
-            <button className="ripple-button">{this.props.content}</button>
+            <button className="ripple-button">{props.content}</button>
         </div>
     )
 }
+export default RippleButton;
