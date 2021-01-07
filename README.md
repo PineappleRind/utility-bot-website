@@ -2,7 +2,7 @@
 
 Built with Typescript, Nestjs and React.
 
-## Credits
+### Credits
 
 * **andrewnijmeh** - *Lead Developer for Utility Bot's Backend Systems* - [andrewnijmeh](https://github.com/andrewnijmeh).
 * **TheCodingGuru** - *Project Manager and Fullstack Developer for Utility Bot* - [TheCodingGuru](https://github.com/TheCodingGuru).
