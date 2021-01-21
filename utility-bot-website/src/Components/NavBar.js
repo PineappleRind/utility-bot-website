@@ -34,16 +34,16 @@ const Navbar = () => {
       <div style={{ display: displayMobileNavbar }} className="mobile-navbar">
         <ul className="mobile-nav-links">
           <Link style={styles} to="/home">
-            <li>Home</li>
+            <li onClick={changeNavbar} >Home</li>
           </Link>
           <Link style={styles} to="/about">
-            <li>About</li>
+            <li onClick={changeNavbar} >About</li>
           </Link>
           <Link style={styles} to="/commands">
-            <li>Commands</li>
+            <li onClick={changeNavbar} >Commands</li>
           </Link>
           <Link style={styles} to="/faq">
-            <li>FAQ</li>
+            <li onClick={changeNavbar} >FAQ</li>
           </Link>
         </ul>
       </div>
