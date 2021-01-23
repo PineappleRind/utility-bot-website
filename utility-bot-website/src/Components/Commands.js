@@ -38,6 +38,7 @@ const Commands = () => {
 
         {commands.map((i, index) => (
           <Command
+            key={i.name}
             changeIdx={() => changeIdx(index)}
             name={i.name}
             params={i.params}

@@ -21,6 +21,7 @@
   word-wrap: break-word;
 }
 .nav {
+  z-index: 100;
   width: 100%;
   height: 18%;
   position: fixed;
@@ -116,6 +117,7 @@
   top: 4rem;
 }
 .cards {
+  padding: 3rem 0;
   background-color: var(--gray);
   display: flex;
   justify-content: space-around;
@@ -130,20 +132,40 @@
 }
 
 .mobile-navbar {
-  box-shadow: 10px 7px 10px #85888c;
+  box-shadow: 1px 7px 10px #85888c;
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   list-style: none;
-  background-color: rgba(27, 27, 27, 0.99);
+  background-color: rgba(30, 30, 30, 0.999);
   font-size: 1.4rem;
   width: 80%;
   position: fixed;
   top: 7rem;
   display: none;
   z-index: 3;
-  animation: tran;
 }
-
+.footer-container {
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 2px solid white;
+  background-color: var(--gray);
+  font-size: 1.2rem;
+}
+.footer-links {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0.5rem 2rem;
+  list-style: none;
+  min-height: 0;
+  /* border: 3px solid white; */
+}
+.footer-links a {
+  color: inherit;
+}
 a {
   margin: 1.5vw;
   padding: 1.5vw;

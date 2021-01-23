@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/Footer"
 import Home from "./components/Home";
 import About from "./components/About";
 import NavBar from "./components/NavBar";
@@ -8,9 +9,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div style={{ overflowX: "hidden" }}>
+    <div style={{ overflow: "hidden" }}>
       <Router>
-        <div>
           <NavBar />
           <Switch>
             <Route path="/home" component={Home} />
@@ -20,7 +20,7 @@ function App() {
             {/* redirects any path to home */}
             <Route component={Home} />
           </Switch>
-        </div>
+          <Footer>hello this is a footer</Footer>
       </Router>
     </div>
   );
