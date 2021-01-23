@@ -1,17 +1,20 @@
-const Command = ({ children, title, bgc = "rgb(30, 30, 30)" }) => {
-  let [params, description] = children.split(";");
-  params = params.replace("params:", "");
-  description = description.replace("description:", "");
-  // example = example.replace("example:", "")
+const Command = ({
+  name,
+  params = "none",
+  description,
+  example = `u!${name} ${params === "none" ? "" : params}`,
+  changeIdx,
+  isIdx,
+}) => {
   return (
     <>
-      <div className="command" style={{ backgroundColor: bgc }}>
-        <div className="command-info" style={{ width: "8%" }}>
-          {title}
+      <div className="command" onClick={changeIdx}>
+        <div className="command-info" style={{ width: "20%" }}>
+          {name}
         </div>
         <div
           className="command-info command-description"
-          style={{ width: "70%" }}
+          style={{ width: "80%" }}
         >
           {description}
         </div>
@@ -19,6 +22,11 @@ const Command = ({ children, title, bgc = "rgb(30, 30, 30)" }) => {
           {params}
         </div>
       </div>
+      {isIdx && (
+        <div className=" command-info dropdown-command">
+          <div className="dropdown-command-content">{example}</div>
+        </div>
+      )}
     </>
   );
 };

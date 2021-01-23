@@ -56,10 +56,12 @@
   /* flex-wrap: wrap; */
   align-items: center;
   width: 100%;
-  height: 2.2rem;
+  height: max-content;
   border-bottom: 2px white solid;
 }
-
+.command:first-of-type {
+  background-color: dimgrey;
+}
 .command-description {
   border-width: 0 3px;
   border-style: solid;
@@ -73,13 +75,27 @@
   margin: 0 1rem;
 }
 .commands-wrapper {
+  margin: 4rem;
+  font-size: 1.4rem;
   width: 80%;
   display: flex;
   align-items: center;
   flex-flow: column;
   border: 0.3rem white solid;
-  
+
   border-radius: 3px;
+}
+.dropdown-command {
+  animation: dropdown-anim 500ms ease-in-out forwards;
+  transform-origin: top center;
+
+  width: 100%;
+  background-color: #2a2a2a;
+  border-bottom: 2px white solid;
+  height: 7rem;
+}
+.dropdown-command-content {
+  position: absolute;
 }
 
 .burguer {
@@ -114,14 +130,18 @@
 }
 
 .mobile-navbar {
+  box-shadow: 10px 7px 10px #85888c;
+  transform-origin: 0% 0%;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   list-style: none;
   background-color: rgba(27, 27, 27, 0.99);
   font-size: 1.4rem;
-  width: 100%;
+  width: 80%;
   position: fixed;
   top: 7rem;
   display: none;
   z-index: 3;
+  animation: tran;
 }
 
 a {
@@ -178,6 +198,7 @@ a:hover {
     display: block;
   }
   .mobile-navbar-links {
+    animation: translateY(-10px);
     list-style: none;
     display: flex;
   }
@@ -188,12 +209,19 @@ a:hover {
     height: 115px;
   }
   .section-content .faq {
-    margin-left: -2rem;
     font-size: 0.8rem;
   }
   .logo {
     width: 92px;
   }
+  .section-container {
+    padding-left: 0rem;
+  }
+  .commands-wrapper {
+    margin: 4rem 0.1rem;
+    width: 95%;
+  }
+
   .html {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -211,6 +239,19 @@ a:hover {
   }
 }
 
+@keyframes dropdown-anim {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
 body,
 html {
   font-family: -paple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

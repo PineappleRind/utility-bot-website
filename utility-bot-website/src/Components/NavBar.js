@@ -6,7 +6,9 @@ const styles = {
 };
 
 const Navbar = () => {
-  const [displayMobileNavbar, toggleMobileNavbar] = useState("none");
+  const [displayMobileNavbar, toggleMobileNavbar] = useState(
+    "translate(-100%, 0)"
+  );
   return (
     <nav>
       <div className="nav">
@@ -31,26 +33,30 @@ const Navbar = () => {
           <div className="burguer line-3"></div>
         </div>
       </div>
-      <div style={{ display: displayMobileNavbar }} className="mobile-navbar">
+      <div style={{ transform: displayMobileNavbar }} className="mobile-navbar">
         <ul className="mobile-nav-links">
           <Link style={styles} to="/home">
-            <li onClick={changeNavbar} >Home</li>
+            <li onClick={changeNavbar}>Home</li>
           </Link>
           <Link style={styles} to="/about">
-            <li onClick={changeNavbar} >About</li>
+            <li onClick={changeNavbar}>About</li>
           </Link>
           <Link style={styles} to="/commands">
-            <li onClick={changeNavbar} >Commands</li>
+            <li onClick={changeNavbar}>Commands</li>
           </Link>
           <Link style={styles} to="/faq">
-            <li onClick={changeNavbar} >FAQ</li>
+            <li onClick={changeNavbar}>FAQ</li>
           </Link>
         </ul>
       </div>
     </nav>
   );
   function changeNavbar() {
-    toggleMobileNavbar(displayMobileNavbar === "none" ? "block" : "none");
+    toggleMobileNavbar(
+      displayMobileNavbar === "translate(-100%, 0)"
+        ? "none"
+        : "translate(-100%, 0)"
+    );
   }
 };
 
