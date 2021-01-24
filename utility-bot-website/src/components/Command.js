@@ -14,11 +14,11 @@ const Command = ({
         </div>
         <div
           className="command-info command-description"
-          style={{ width: "80%" }}
+          style={{ width: "65%" }}
         >
           {description}
         </div>
-        <div className="command-info" style={{ width: "20%" }}>
+        <div className="command-info" style={{ width: "15%" }}>
           {params}
         </div>
       </div>

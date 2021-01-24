@@ -73,17 +73,16 @@
   align-items: center;
   height: 100%;
   text-align: center;
-  margin: 0 1rem;
 }
 .commands-wrapper {
+  font-size: 1.3rem;
   margin: 4rem;
-  font-size: 1.4rem;
   width: 80%;
   display: flex;
   align-items: center;
   flex-flow: column;
   border: 0.3rem white solid;
-
+  flex: 1 0 1;
   border-radius: 3px;
 }
 .dropdown-command {
@@ -145,23 +144,37 @@
   z-index: 3;
 }
 .footer-container {
-  height: 100px;
+  /* height: 170px; */
   display: flex;
   justify-content: flex-end;
   border-top: 2px solid white;
-  background-color: var(--gray);
+  background-color: #2a2a2a;
   font-size: 1.2rem;
+  bottom: 0;
+  width: 100%;
+}
+.footer-container ul:first-child {
+  margin-right: auto;
+}
+.footer-credits{
+  font-family: Roboto, sans-serif;
+  list-style: none;
 }
 .footer-links {
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: flex-start;
   padding: 0;
   margin: 0.5rem 2rem;
   list-style: none;
   min-height: 0;
   /* border: 3px solid white; */
+}
+.footer-links li:first-child {
+  /* margin: 1rem 0; */
+  font-weight: bold;
+  text-decoration: aqua underline;
 }
 .footer-links a {
   color: inherit;
@@ -173,6 +186,9 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+.colored-text{
+  color:aqua
 }
 .invite-button {
   font-family: inherit;
@@ -240,14 +256,32 @@ a:hover {
     padding-left: 0rem;
   }
   .commands-wrapper {
+    font-size: 4vw;
     margin: 4rem 0.1rem;
     width: 95%;
   }
-
+  .command-description {
+    width: 50%;
+  }
   .html {
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-all;
+  }
+  .footer-container {
+    height: 600px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+  }
+  .footer-links {
+    padding: 0;
+    margin: 1rem 0.3rem;
+    align-items: flex-start;
+    font-size: 1.3rem;
+  }
+  .footer-links li:first-child {
+    margin: 0;
   }
 }
 
@@ -276,7 +310,7 @@ a:hover {
 }
 body,
 html {
-  font-family: -paple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
   background-color: var(--black);

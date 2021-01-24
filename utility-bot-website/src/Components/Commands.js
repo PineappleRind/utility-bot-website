@@ -16,6 +16,7 @@ const commands = [
     params: "user",
     description: "ban a user",
   },
+  {name:"play", description:"play a song"},{},{}
 ];
 
 const Commands = () => {
@@ -28,10 +29,11 @@ const Commands = () => {
   };
 
   return (
+    <div style={{minHeight:"100vh"}}>
     <div className="section-container">
       <div className="commands-wrapper">
         <Command
-          name="command name"
+          name="name"
           params="params"
           description="description"
         ></Command>
@@ -48,7 +50,7 @@ const Commands = () => {
           />
         ))}
       </div>
-    </div>
+    </div></div>
   );
 };
 

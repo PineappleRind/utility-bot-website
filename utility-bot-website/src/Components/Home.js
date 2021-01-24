@@ -2,7 +2,7 @@ import RippleButton from "./RippleButton";
 import Card from "./card";
 const Home = () => {
   return (
-    <div>
+    <div >
       <div className="section-container">
         <div>
           <h1 className="section-content" style={{ marginLeft: "0.7rem" }}>

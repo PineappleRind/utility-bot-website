@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div style={{ overflow: "hidden", position:"relative", minHeight:"100vh"}}>
       <Router>
           <NavBar />
           <Switch>
@@ -20,7 +20,7 @@ function App() {
             {/* redirects any path to home */}
             <Route component={Home} />
           </Switch>
-          <Footer>hello this is a footer</Footer>
+          <Footer className="footer-container">hello this is a footer</Footer>
       </Router>
     </div>
   );
