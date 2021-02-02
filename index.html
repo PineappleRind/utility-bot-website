@@ -12,68 +12,58 @@
 </head>
 <body class="h-screen w-screen">
     <nav>
-        <div class="github" id="github">
-            <a href="https://github.com/discordutilitybot">
-                <img src="imgs/github.svg">
+        </div>
+        <div class="fixed top-0 z-10 inset-x-0 flex flex-row items-center justify-between navbar" id="navShade">
+            <a href="utilitybot.co">
+                <img class="h-10 m-6" style="filter: drop-shadow(0 0 0.35rem rgba(0, 0, 0, 0.466))"src="imgs/logo.png">
             </a>
-        </div>
-        <p id="githubLabel">View on GitHub</p>
-        <div class="menu" id="menuOpen">
-            <div class="nav-toggle">
-                <div class="nav-toggle-bar"></div>
-              </div>
-        </div>
-        <div class="fixed top-0 inset-x-0 p-4 bg-white" id="navShade">
-            <ul id="navItems">
-                <a href="utilitybot.co">
-                    <img class="h-40" src="imgs/logo.png">
-                </a>
-                <li class="p-4 float-right">Home</li>
-                <li class="p-4 float-right">FAQ</li>
-                <li class="p-4 float-right">Commands</li>
-                <li class="p-4 float-right">Contact</li>
-                <li class="p-4 float-right">Invite<span class="ripple" id="ripple"></span></li>
+            <ul id="navItems" class="mr-14 text-white">
+                <li class="p-4 m-2 float-left">Home</li>
+                <li class="p-4 m-2 float-left">FAQ</li>
+                <li class="p-4 m-2 float-left">Commands</li>
+                <li class="p-4 m-2 float-left">Contact</li>
+                <li class="px-6 py-4 m-2 float-left bg-blue-400">Invite</li>
             </ul>
         </div>
     </nav>
-    <main id="main" class="mt-7 ">
-        <div class="absolute inset-0 h-screen w-screen flex flex-col justify-center items-center">
+    <main id="main">
+        <div class="h-screen w-screen flex flex-col justify-center items-center">
             <div class="title-container">
-                <h1 class="text-center text-8xl text-white">UtilityBot</h1>
+                <h1 class="text-center text-8xl text-white">Utility Bot</h1>
                 <h2 class="text-center text-4xl text-white">The ultimate server management bot</h2>
-                <div class="flex flex-row">
-                    <button class="bg-blue-600 text-white px-3 py-2 m-4 rounded">Invite</button>
-                    <button class="bg-blue-600 text-white px-3 py-2 m-4 rounded">Support</button>
-                    <button class="bg-blue-600 text-white px-3 py-2 m-4 rounded">Commands</button>
+                <div class="flex flex-row justify-center">
+                    <button class="bg-gradient-to-r from-green-500 to-indigo-500 text-white px-3 py-2 m-4 transform rounded hover:-translate-y-0.5">Invite</button>
+                    <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-2 m-4 transform rounded hover:-translate-y-0.5">Support</button>
+                    <button class="bg-gradient-to-r from-yellow-500 to-red-500 text-white px-3 py-2 m-4 transform rounded hover:-translate-y-0.5">Commands</button>
                 </div>
             </div>
             <div class="arrow-wrap">
                 <p id="goDown"></p>
             </div>
         </div>
-        <div class="page second">
-            <div class="features">
-                <div class="feature">
-                    <h1>Features</h1>
+        <div class="h-screen w-screen flex flex-col justify-center items-center bg-gray-500 second-page">
+            <div class="flex flex-row justify-center items-center">
+                <div class="p-5 bg-white shadow-lg m-2 rounded">
+                    <h1 class="">Features</h1>
                     <hr>
-                    <p></p>
+                    <p>UtilityBot has countless integrations including hypixel, bedwars,.</p>
                 </div>
-                <div class="feature">
+                <div class="p-5 bg-white shadow-lg m-2 rounded">
                     <h1>Integrations</h1>
                     <hr>
                 </div>
-                <div class="feature">
+                <div class="p-5 bg-white shadow-lg m-2 rounded">
                     <h1>Utilities</h1>
                     <hr>
                 </div>
             </div>
         </div>
     </main>
-    <div class="modal-blur" id="overlay"><div class="modal" id="contactModal"><p id="contactClose">&times;</p><h2>Contact Us</h2></div></div>
-    <div id="blurOverlay"></div>
+    <div id="overlay"></div>
     <script src="js/app.dev.js"></script>
+
+    <noscript>Please enable JavaScript</noscript>
     <!-- Script tag with single space below will stop unwanted transitions from firing on page load on chrome :) -->
     <script> </script>
-    <noscript>Please enable JavaScript</noscript>
 </body>
 </html>
