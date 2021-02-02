@@ -1,0 +1,5 @@
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background: repeating-linear-gradient(45deg, rgb(52, 52, 59) 0%,rgb(31, 30, 34) 10%,rgb(52, 52, 59) 30%);
+}

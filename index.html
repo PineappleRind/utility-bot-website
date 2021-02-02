@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The ultimate server management bot with moderation, memes, and so much more">
-    <link rel="stylesheet" href="css/dist/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>UtilityBot | Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;500&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="h-screen w-screen">
     <nav>
-        <div class="logo-wrap">
-            <a class="logo-link" href="utilitybot.co">
-                <img src="imgs/christmas_logo.png">
-            </a>
-        </div>
         <div class="github" id="github">
             <a href="https://github.com/discordutilitybot">
                 <img src="imgs/github.svg">
@@ -27,21 +23,29 @@
                 <div class="nav-toggle-bar"></div>
               </div>
         </div>
-        <div class="main-nav" id="navShade">
+        <div class="fixed top-0 inset-x-0 p-4 bg-white" id="navShade">
             <ul id="navItems">
-                <li>Home</li>
-                <li>FAQ</li>
-                <li>Commands</li>
-                <li id="contact">Contact</li>
-                <li class="special" id="rippleBtn">Invite<span class="ripple" id="ripple"></span></li>
+                <a href="utilitybot.co">
+                    <img class="h-40" src="imgs/logo.png">
+                </a>
+                <li class="p-4 float-right">Home</li>
+                <li class="p-4 float-right">FAQ</li>
+                <li class="p-4 float-right">Commands</li>
+                <li class="p-4 float-right">Contact</li>
+                <li class="p-4 float-right">Invite<span class="ripple" id="ripple"></span></li>
             </ul>
         </div>
     </nav>
-    <main id="main">
-        <div class="page first">
+    <main id="main" class="mt-7 ">
+        <div class="absolute inset-0 h-screen w-screen flex flex-col justify-center items-center">
             <div class="title-container">
-                <h1>UtilityBot</h1>
-                <h2>The ultimate server management bot</h2>
+                <h1 class="text-center text-8xl text-white">UtilityBot</h1>
+                <h2 class="text-center text-4xl text-white">The ultimate server management bot</h2>
+                <div class="flex flex-row">
+                    <button class="bg-blue-600 text-white px-3 py-2 m-4 rounded">Invite</button>
+                    <button class="bg-blue-600 text-white px-3 py-2 m-4 rounded">Support</button>
+                    <button class="bg-blue-600 text-white px-3 py-2 m-4 rounded">Commands</button>
+                </div>
             </div>
             <div class="arrow-wrap">
                 <p id="goDown"></p>
