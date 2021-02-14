@@ -2,35 +2,40 @@
   overflow-x: hidden;
   --gray: rgb(34, 32, 32);
   --black: rgb(24, 24, 24);
+  height: 100vh;
 }
 
-.section-container {
+.fullpage-container {
   background-color: var(--black);
-  background-image: linear-gradient(var(--black) 75%, var(--gray));
   display: flex;
   justify-content: center;
-  padding-top: 8rem;
-  padding-left: 2rem;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  height: calc(100vh - 100px);
+  padding-top: 100px;
+  animation: fade-in-anim 2s;
 }
-.section-content {
-  margin-top: 9rem;
-  /* margin-left: -2rem;
-  padding: 2rem 7rem; */
-  animation: fade-in-anim 2.5s;
-  align-self: center;
-  word-wrap: break-word;
+.fullpage-container h1 {
+  font-size: 80px;
+  margin:0;
+}
+
+.fullpage-container h2 {
+  font-size: 30px;
+  margin:0;
 }
 .nav {
-  z-index: 100;
+  z-index: 10;
   width: 100%;
-  height: 18%;
+  height: 100px;
   position: fixed;
   top: 0;
   left: 0;
   background: var(--black);
   display: flex;
   align-items: center;
-  border-bottom: 2px whitesmoke solid;
+  box-shadow: 0 5px 30px rgb(0, 0, 0);
 }
 .nav-items {
   display: flex;
@@ -41,6 +46,9 @@
   height: 13vw;
   list-style: none;
   margin-left: 2rem;
+}
+.nav .logo {
+  height: 100px;
 }
 .burguer-toggle {
   cursor: pointer;
@@ -126,22 +134,31 @@
   background-color: var(--black);
 
   width: 22%;
-  border: 4px solid white;
   border-radius: 1rem;
 }
 
 .mobile-navbar {
-  box-shadow: 1px 7px 10px #85888c;
   transform-origin: 0% 0%;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   list-style: none;
   background-color: rgba(30, 30, 30, 0.999);
   font-size: 1.4rem;
-  width: 80%;
+  width: 100vw;
   position: fixed;
   top: 7rem;
   display: none;
   z-index: 3;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding: 20px;
+  padding-top: 200px;
+}
+
+.mobile-navbar-links {
+  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 .footer-container {
   /* height: 170px; */
@@ -152,6 +169,7 @@
   font-size: 1.2rem;
   bottom: 0;
   width: 100%;
+  position: fixed;
 }
 .footer-container ul:first-child {
   margin-right: auto;
@@ -220,6 +238,10 @@ a:hover {
   padding: 0 1rem;
 }
 
+hr {
+  width: 50%;
+}
+
 @media (max-width: 720px) {
   .cards {
     align-items: center;
@@ -269,10 +291,11 @@ a:hover {
     word-break: break-all;
   }
   .footer-container {
-    height: 600px;
     align-items: flex-start;
     justify-content: flex-start;
     flex-flow: column;
+    position: absolute;
+    bottom:0;
   }
   .footer-links {
     padding: 0;
@@ -310,10 +333,24 @@ a:hover {
 }
 body,
 html {
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
   background-color: var(--black);
   padding: 0;
   margin: 0;
+}
+
+
+.ripple-button {
+  padding: 10px 16px;
+  font-size: 20px;
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight:700;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  border:0;
 }

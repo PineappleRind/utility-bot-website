@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Command from "./Command";
+import Command from "../Command";
 
 // to add the commands just create a new object with the commands properties
 // if no example is provided it will throw u! + the name of the command
@@ -30,7 +30,7 @@ const Commands = () => {
 
   return (
     <div style={{minHeight:"100vh"}}>
-    <div className="section-container">
+    <div className="fullpage-container">
       <div className="commands-wrapper">
         <Command
           name="name"

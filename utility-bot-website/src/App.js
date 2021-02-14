@@ -1,10 +1,10 @@
 import "./App.css";
-import Footer from "./components/Footer"
-import Home from "./components/Home";
-import About from "./components/About";
-import NavBar from "./components/NavBar";
-import Faq from "./components/Faq";
-import Commands from "./components/Commands";
+import Footer from "./Components/Footer"
+import Home from "./Home";
+import About from "./About";
+import NavBar from "./Components/NavBar";
+import Faq from "./Faq";
+import Commands from "./Components/Commands";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -20,9 +20,10 @@ function App() {
             {/* redirects any path to home */}
             <Route component={Home} />
           </Switch>
-          <Footer className="footer-container">hello this is a footer</Footer>
       </Router>
+      <Footer className="footer-container">hello this is a footer</Footer>
     </div>
+    
   );
 }
 
